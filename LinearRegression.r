@@ -35,3 +35,5 @@ ggplot() + geom_point(aes(x = testset$wt, y = testset$mpg), colour = 'red') +
   geom_line(aes(x = trainingset$wt, y = predict(lm.r, newdata = trainingset)), colour = 'black') +
   ggtitle('MPG vs WT (Test set)') +
   xlab('WT') + ylab('MPG')
+
+predict(lm.r, data.frame(wt=3.5))
